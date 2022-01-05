@@ -532,7 +532,7 @@ define(["sys/mman.h"], [
 # OPEN(2)
 define(["fcntl.h"], [
   "int open(const char* path, int flags, ...)",
-  #~ "int openat(int fd, const char* path, int flags, ...)"
+  "int openat(int fd, const char* path, int flags, ...)"
 ])
 
 # PIPE(2)
