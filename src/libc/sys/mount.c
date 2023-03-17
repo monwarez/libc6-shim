@@ -82,7 +82,22 @@ int shim_statfs64_impl(const char* path, linux_statfs64* linux_buf) {
   return err;
 }
 
+#include <errno.h>
+int shim_statvfs64_impl(const char* path, void* buf)
+{
+  errno = ENOSYS;
+  return -1;
+}
+
+int shim_fstatvfs64_impl(int fd, void* buf)
+{
+  errno = ENOSYS;
+  return -1;
+}
+
 SHIM_WRAP(fstatfs);
 SHIM_WRAP(fstatfs64);
+SHIM_WRAP(fstatvfs64);
 SHIM_WRAP(statfs);
 SHIM_WRAP(statfs64);
+SHIM_WRAP(statvfs64);
