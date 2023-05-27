@@ -505,7 +505,7 @@ static int linux_to_native_so_opt(int optname) {
     case LINUX_SO_RCVBUF:    return SO_RCVBUF;
     case LINUX_SO_KEEPALIVE: return SO_KEEPALIVE;
     case LINUX_SO_DEBUG: assert(0 && "SO_DEBUG");
-    case LINUX_SO_REUSEADDR: assert(0 && "SO_REUSEADDR");
+    case LINUX_SO_REUSEADDR: return SO_REUSEADDR;
     case LINUX_SO_TYPE: assert(0 && "SO_TYPE");
     case LINUX_SO_ERROR: assert(0 && "SO_ERROR");
     case LINUX_SO_DONTROUTE: assert(0 && "SO_DONTROUTE");
