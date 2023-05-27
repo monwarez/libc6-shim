@@ -504,6 +504,22 @@ static int linux_to_native_so_opt(int optname) {
     case LINUX_SO_SNDBUF:    return SO_SNDBUF;
     case LINUX_SO_RCVBUF:    return SO_RCVBUF;
     case LINUX_SO_KEEPALIVE: return SO_KEEPALIVE;
+    case LINUX_SO_DEBUG: assert(0 && "SO_DEBUG");
+    case LINUX_SO_REUSEADDR: assert(0 && "SO_REUSEADDR");
+    case LINUX_SO_TYPE: assert(0 && "SO_TYPE");
+    case LINUX_SO_ERROR: assert(0 && "SO_ERROR");
+    case LINUX_SO_DONTROUTE: assert(0 && "SO_DONTROUTE");
+    case LINUX_SO_OOBINLINE: assert(0 && "SO_OBBINLINE");
+    case LINUX_SO_LINGER: assert(0 && "SO_LINGER");
+    case LINUX_SO_REUSEPORT: assert(0 && "SO_REUSEPORT");
+    case LINUX_SO_PASSCRED: assert(0 && "SO_PASSCRED");
+    case LINUX_SO_RCVLOWAT: assert(0 && "SO_RCVLOWAT");
+    case LINUX_SO_SNDLOWAT: assert(0 && "SO_SNDLOWAT");
+    case LINUX_SO_RCVTIMEO: assert(0 && "SO_RCVTIMEO");
+    case LINUX_SO_SNDTIMEO: assert(0 && "SO_SNDTIMEO");
+    case LINUX_SO_TIMESTAMP: assert(0 && "SO_TIMESTAMP");
+    case LINUX_SO_ACCEPTCONN: assert(0 && "SO_ACCEPTCONN");
+    case LINUX_SO_PROTOCOL: assert(0 && "SO_PROTOCOL");
     default:
       assert(0);
   }
