@@ -145,6 +145,21 @@ SHIM_WRAP(pthread_mutexattr_setrobust);
 SHIM_WRAP(pthread_mutexattr_gettype);
 SHIM_WRAP(pthread_mutexattr_settype);
 
+static int shim_pthread_rwlockattr_getkind_np_impl(const linux_pthread_rwlockattr_t* attr, int* pref)
+{
+    LOG("FIXME: rwlockattr_getkind_np stub %p", attr);
+    return 0;
+}
+
+static int shim_pthread_rwlockattr_setkind_np_impl(linux_pthread_rwlockattr_t* attr, int pref)
+{
+    LOG("FIXME: rwlockattr_setkind_np stub %d", pref);
+    return 0;
+}
+
+SHIM_WRAP(pthread_rwlockattr_getkind_np);
+SHIM_WRAP(pthread_rwlockattr_setkind_np);
+
 static int linux_to_native_mutex_kind(int linux_kind) {
   switch (linux_kind) {
     case LINUX_PTHREAD_MUTEX_NORMAL:      return PTHREAD_MUTEX_NORMAL;
