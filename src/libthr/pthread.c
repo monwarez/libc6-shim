@@ -63,6 +63,13 @@ SHIM_WRAP(pthread_setname_np);
 //SHIM_WRAP(pthread_key_create);
 SHIM_WRAP(pthread_kill);
 
+static int shim_pthread_mutex_clocklock_impl(linux_pthread_mutex_t* mutex, clockid_t clk, const struct timespec *abstime)
+{
+    return 0;
+}
+
+SHIM_WRAP(pthread_mutex_clocklock);
+
 static int shim_pthread_mutexattr_getkind_np_impl(const linux_pthread_mutexattr_t* attr, int* kind) {
   UNIMPLEMENTED();
 }

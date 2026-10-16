@@ -2589,6 +2589,11 @@ define(["pthread.h"], [
   "int pthread_mutex_init(pthread_mutex_t* mutex, const pthread_mutexattr_t* attr)"
 ])
 
+# PTHREAD_MUTEX_CLOCKLOCK(3)
+define(["pthread.h", "time.h"], [
+  "int pthread_mutex_clocklock(pthread_mutex_t* mutex, clockid_t clk, const struct timespec *abstime)"
+])
+
 # PTHREAD_MUTEX_LOCK(3)
 define(["pthread.h"], [
   "int pthread_mutex_lock(pthread_mutex_t* mutex)"
